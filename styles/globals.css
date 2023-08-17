@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .meta-strap {
+        @apply inline-block italic text-zinc-200 text-sm bg-zinc-700 pr-6 py-2 pl-6 -ml-6 my-2 shadow-sm rounded-tr-lg rounded-br-lg;
+    }
+
+    .meta-strap-wide {
+        @apply inline-block w-full max-w-full italic text-zinc-200 text-sm bg-zinc-700 pr-6 py-2 pl-10 -ml-10 my-2 shadow-md rounded-tr-lg rounded-br-lg;
+    }
+
+    .child-vid iframe {
+        @apply -ml-4
+        aspect-video
+        h-auto;
+        width: calc(100% + 32px);
+    }
+
+
+
+    .inner {
+        @apply container mx-auto py-16;
+    }
+
+    .inner-0 {
+        @apply container mx-auto py-0;
+    }
+
+
+    .button-link {
+      @apply rounded-md border-4 bg-brand px-4 py-2 text-white hover:border-brandaccent hover:text-zinc-100 hover:brightness-200;
+    }
+
+    h1, h2 {
+        /* font-family: 'Poppins', sans-serif; */
+        @apply font-brand;
+      }
+
+      section p a {
+        @apply text-brand font-bold
+      }
+
+      footer li, footer a {
+        @apply relative;
+      }
+
+      footer li::before, footer a::before {
+        @apply bg-zinc-600;
+      }
+
+
+
+    .sideways {
+       box-shadow: inset 0 -6px 9px -5px rgba(0,0,0,1);
+       transform: translateX(-132%) translateY(20%)  rotate(-90deg);
+       -webkit-transform: translateX(-132%) translateY(20%)  rotate(-90deg);
+       -moz-transform: translateX(-132%) translateY(20%)  rotate(-90deg);
+       -ms-transform: translateX(-132%) translateY(20%)  rotate(-90deg);
+       -o-transform: translateX(-132%) translateY(20%)  rotate(-90deg);
+}
+@media screen and (max-width: 767px) {
+    header.collapse #nav-tray {
+        @apply opacity-0 h-0 md:opacity-100 md:h-auto;
+    }
+
+    header.expand #nav-tray {
+        @apply opacity-100 h-full;
+    }
+
+    header.expand .top-strap {
+        @apply h-24;
+    }
+    
+}
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Oswald:wght@500&family=Poppins:wght@200;400;700&display=swap'); */
+
+/* @import url('/tepid.ttf'); */
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: "Tepid";
+    src: url('/font/tepid.ttf');
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.process-2 {
+    -webkit-clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.process-3 {
+    -webkit-clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 100%, 0% 100%);
+            clip-path: polygon(0% 0%, 50% 20%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.home-title {
+    text-shadow: 0 2px 1px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+  }
+
+
+
+  #dark-button::before {
+      content: url(../public/dark.svg);
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 70%;
+      height: 70%;
+  }
+
+  body.dark #dark-button::before {
+      content: url(../public/light.svg);
+  }
+
+  .flank::after {
+      content: "";
+      height: 100%;
+      width: .6em;
+      right: -1.4em;
+      position: absolute;
+      background-color: inherit;
+  }
+
+  .flank.rgt::after {
+      right: auto;
+      left: -1.4em;
+  }
+
+#slider [class^="number-slide"], #slider
+[class*=" number-slide"] {
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  color: #fff;
+  font-weight: 500;
+  height: 200px;
+  max-height: 100vh;
+}
+
+#cycler {
+    background-image: url('/img/douglas-sheppard-9rYfG8sWRVo-unsplash.jpg');
+}
+
+/* .opn-progress::after {
+    content: "›";
+    position: absolute;
+    right: 50%;
+    height: 100%;
+    color: white;
+} */
+
+@media screen and (min-width: 768px) {
+    .process-2 {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10% 50%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10% 50%);
+    }
+    
+    .process-3 {
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10% 50%);
+                clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 10% 50%);
+    }
+    
+}
+footer li {
+    position: relative;
+}
+
+footer li::before, footer a::before {
+    position: absolute;
+    transform: translate(-150%, -50%);
+    top: 50%;
+    left: 0;
+    width: 10px;
+    content: "";
+    height: 100%;
+}

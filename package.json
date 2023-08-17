@@ -1,0 +1,37 @@
+{
+  "name": "itzerblog",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@heroicons/react": "^1.0.6",
+    "@trycourier/courier": "^3.4.0",
+    "axios": "^0.25.0",
+    "emailjs": "^3.7.0",
+    "keen-slider": "^6.6.14",
+    "next": "^13.2.4",
+    "nodemailer": "^6.7.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-social-media-embed": "^2.3.5",
+    "react-twitter-widgets": "^1.11.0",
+    "sharp": "^0.30.0",
+    "swr": "^1.2.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.1",
+    "autoprefixer": "^10.4.2",
+    "eslint": "^8.16.0",
+    "eslint-config-next": "^13.2.4",
+    "postcss": "^8.4.8",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "prettier-plugin-tailwindcss": "^0.1.5",
+    "tailwindcss": "^3.0.23"
+  }
+}
